@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "npm run build && cd dist && git init && git add . && git commit -m \"update\" && git remote add origin git@github.com:minipaper/html.git && git push --force origin master:gh-pages"
   },
   "dependencies": {
     "nuxt": "^2.0.0"
